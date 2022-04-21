@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /**
+         * Reserved word
+         * this is the refernce of the object in which it is being used
+         */
+        var details = {
+            f_name: "Bhagirath",
+            l_name: "Giri",
+            company: "WsCube Tech",
+            age: 23,
+            gender: "M",
+            getFullName: function() {
+                console.log(this.f_name + " " + this.l_name)
+            }
+        }
+        var detail2 = {
+            f_name: "Jenny",
+            l_name: "Something",
+            company: "WsCube Tech",
+            age: 23,
+            gender: "F",
+            getFullName: function() {
+                console.log(this.f_name + " " + this.l_name)
+            }
+        }
+
+        console.log(document)
+        details.getFullName()
+        detail2.getFullName()
+    </script>
+</body>
+
+</html>

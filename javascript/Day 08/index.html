@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = prompt("Please enter a number");
+        var flag = true;
+        // true -> is prime
+        // false -> not prime
+        if (num == 1) {
+            console.log("Neither prime nor composite")
+        } else if (num <= 0) {
+            console.log("Invalid input")
+        } else {
+            for (var i = 2; i < num; i++) {
+                // console.log(`${num}/${i}`)
+                if (num % i == 0) {
+                    // not prime
+                    flag = false;
+                    break;
+                }
+            }
+
+            if (flag == true) {
+                console.log(`${num} is prime`)
+            } else {
+                console.log(`${num} is not prime`)
+            }
+        }
+    </script>
+</body>
+
+</html>

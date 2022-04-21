@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test">
+        <h1>Hello!!!</h1>
+    </div>
+    <button onclick="setData()">Click Me</button>
+    <script>
+        var elem = document.getElementById("test")
+
+        function setData() {
+            var data = prompt("Enter something")
+            elem.innerHTML = elem.innerHTML + `<h3> ${data} </h3>` //set
+        }
+        // .innerText
+        // .innerHTML
+    </script>
+</body>
+
+</html>

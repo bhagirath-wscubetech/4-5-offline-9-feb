@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button oncontextmenu="return contextMenuCall()">Context Menu</button>
+    <button onclick="btnClick()">Left Click</button>
+    <button ondblclick="btnDClick()">Double Click</button>
+    <script>
+        function btnClick() {
+            console.log("Left click")
+        }
+
+        function btnDClick() {
+            console.log("Left double click")
+        }
+
+        function contextMenuCall() {
+            console.log('context menu')
+            return false;
+        }
+    </script>
+</body>
+
+</html>

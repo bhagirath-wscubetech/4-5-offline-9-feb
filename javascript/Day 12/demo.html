@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            transition: 1s;
+        }
+        
+        .toggle {
+            background-color: blue !important;
+            /* width: 600px !important; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="box" onmouseenter="box.style.backgroundColor = 'blue'" onmouseleave="box.style.backgroundColor = 'red'"></div> -->
+    <!-- <div id="box" onmouseenter="toggleColor(1)" onmouseleave="toggleColor(0)"></div> -->
+    <div id="box" onmousedown="toggleColor(1)" onmouseup="toggleColor(0)"></div>
+    <script>
+        var box = document.getElementById("box")
+
+        function toggleColor(flag) {
+            // console.log(flag)
+            if (flag == 1) {
+                // box.style.backgroundColor = 'blue'
+                // box.style.width = "600px"
+                box.classList.add("toggle")
+            } else {
+                // box.style.backgroundColor = 'red'
+                // box.style.width = "400px"
+                box.classList.remove("toggle")
+            }
+        }
+    </script>
+</body>
+
+</html>

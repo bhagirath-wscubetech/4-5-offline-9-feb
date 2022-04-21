@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: verdana;
+		}
+		a{
+			color: inherit;
+			text-decoration: none;
+		}
+		nav{
+			width: 1000px;
+			margin: auto;
+			background: #3498db;
+		}
+		nav > ul > li{
+			/*direct child selector ( > )*/
+			padding: 15px;
+			font-size: 20px;
+			color:white;
+			transition: 0.5s;
+			display: inline-block;
+			position: relative;
+		}
+		nav ul li:hover{
+			background: #34495e;
+		}
+		nav ul li:hover .child{
+			top:100%;
+			opacity: 1; /*for users*/
+			visibility: visible;
+			transform: scaleY(1);
+		}
+		.child{
+			visibility: hidden;
+			position: absolute;
+			top:100%;
+			transition: 1s;
+			left: 0;
+			opacity: 0;
+			list-style: none;
+			min-width: 150%;
+			background: #34495e;
+			z-index: -1;	
+			transform: scaleY(0);	
+			transform-origin: top center;
+		} 
+		.child > li{
+			padding: 5px;
+
+		}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>
+				<a href="">Menu 1</a>
+				<ul class="child">
+					<li>
+						<a href="">
+							M -1 Child 1
+						</a>
+					</li>
+					<li>
+						<a href="">
+							M -1 Child 2
+						</a>
+					</li>
+					<li>
+						<a href="">
+							M -1 Child 3
+						</a>
+					</li>
+
+					<li>
+						<a href="">
+							M -1 Child 4
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="">Menu 2</a>
+			</li>
+			<li>
+				<a href="">Menu 3</a>
+				<ul class="child">
+					<li>
+						<a href="">
+							M-3 Child 1
+						</a>
+					</li>
+					<li>
+						<a href="">
+							M-3 Child 2
+						</a>
+					</li>
+					<li>
+						<a href="">
+							M-3 Child 3
+						</a>
+					</li>
+
+					<li>
+						<a href="">
+							M-3 Child 4
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="">Menu 4</a>
+			</li>
+		</ul>
+	</nav>	
+</body>
+</html>

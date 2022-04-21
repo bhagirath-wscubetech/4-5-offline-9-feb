@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            padding: 5px;
+            text-align: center;
+            border: 2px red solid;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div.box*4 -> press tab -->
+    <button onclick="demo()">Click Me!!</button>
+    <div class="box">
+        <h1>1</h1>
+    </div>
+    <div class="box">
+        <h1>2</h1>
+    </div>
+    <div class="box">
+        <h1>3</h1>
+    </div>
+    <div class="box">
+        <h1>4</h1>
+    </div>
+    <div class="box">
+        <h1>5</h1>
+    </div>
+    <script>
+        var boxes = document.getElementsByClassName("box");
+
+        function demo() {
+            var index = prompt(`Select between 0 and ${boxes.length - 1}`)
+                // console.log(index != "")
+                // console.log(index != null)
+                // console.log(index >= 0)
+                // console.log(index < boxes.length)
+            if (index != "" && index != null && index >= 0 && index < boxes.length) {
+                boxes[index].style.backgroundColor = "red"
+            }
+            //  else {
+            //     demo()
+            //         // reccursion
+            //         // function calling itself
+            // }
+            //background - color - > backgroundColor
+            // font - size - > fontSize
+        }
+    </script>
+</body>
+
+</html>
